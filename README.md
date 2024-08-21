@@ -1,7 +1,9 @@
 # Revoke_ALL_MFA
 Revoke all MFA methods for users in CSV list
 
-This script will remove the authentication methods for users in the selected CSV. To obtain a CSV please export from Azure by 
+This script will remove the authentication methods for users in the selected CSV. This script will ask for confirmation on each user. This can be modified to not ask for confirmation if you are sure that the csv you have does not include any accounts you do not want to target. To do this you need to remove lines 30,31,& 32.
+
+To obtain a CSV please export from Azure by 
 
 1. Going to entra.microsoft.com and logging in as an administrator
 2. Selecting All users under the users tab
@@ -22,6 +24,4 @@ To Remove Authentication Methods for users
 4. Follow the prompts
 5. Sign in with global admin when prompted
 6. The script will ask you for each user if you want to remove authentication methods for that user, select Y to remove and N to skip 
-(this can be modified to not ask for confirmation if you are sure that the csv you have does not include any accounts you do not want 
-to target by removing lines 30,31, and 32)
 7. The end
